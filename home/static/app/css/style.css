@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: "Popins", sans-serif;
+}
+body {
+    font-family: "Popins", sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+.header {
+    background-color: #EFEFEF;
+}
+.header .header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .header-logo {
+    display: flex;
+    align-items: center;
+}
+.header .header-logo img {
+    width: 60px;
+    height: 60px;
+}
+.header .header-logo-title a {
+    font-size: 2.5rem;
+    margin-left: 10px;
+    color: #232323;
+    font-weight: 700;
+}
+
+.header .header-menu-list {
+    display: flex;
+}
+.header .header-menu-list .header-menu-item {
+    padding: 40px 20px;
+    font-size: 1.8rem;
+}
+.header .header-menu-list .header-menu-item a {
+    color: #232323;
+    font-weight: 500;
+}
+.header .form-login a {
+    padding: 0 20px;
+    font-size: 1.8rem;
+    color: #232323;
+}
+.header .header-menu-list .header-menu-item a:hover {
+    color:  #565656;
+}
+.header .header-menu-list .header-menu-item:hover {
+    background: #fff;
+}
+/* .header .header-menu-list .header-menu-item a:hover {
+    color: red;
+} */.header .form-login a:hover {
+    color: red;
+}
+.header .form-login .success-login {
+    display: flex;
+    align-items: center;
+}
+.header .form-login .success-login span {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.section-1 {
+
+    padding: 120px;
+    overflow: hidden;
+    background-color: #cccccc;
+}
+.section-1 h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0 0 50px 0;
+}
+ .section-1 .inner-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+}
+.section-1 .inner-item-image img{
+    width: 50px ;
+    height:50px;
+    object-fit: cover;
+} 
+.section-1 .inner-item {
+    text-align: center;
+    background-color: #fff;
+    margin: 10px 15px;
+    width: 190px;
+    padding: 40px 10px;
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+    height: auto;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+}
+.section-1 .inner-item-content {
+    margin: 30px 0;
+    letter-spacing: 1px;
+}
+.section-1 .inner-item-content h3 {
+    font-size: 1.8rem;
+}
+.section-1 .inner-item::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: #f5f5f5;
+    width: 100%;
+    opacity: .15;
+    height: 100%;
+    bottom: -10px;
+    left: 0px;
+    right: -20px;
+    margin: auto;
+    border-radius: 20px
+}
+.btn {
+    width: 120px;
+    height: 40px;
+    font-size: 1.6rem;
+    background-color: #8261EE !important;
+    border-radius: 2px;
+    border:#8261EE 1px solid;
+    color: #fff !important;
+}
+.btn:hover {
+    background-color: #ff589e !important;
+
+}
+.inner-form-icon-respisive {
+    display: none;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    display: none;
+    background-color: #EFEFEF;
+    padding: 20px;
+}
+.footer-inner .footer-title {
+    text-align: center;
+}
+.footer-list-link {
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+}
+.footer-item-link {
+    margin-bottom: 20px;
+}
+
+@media (max-width:991.91px) {
+    .header .header-main {
+        display: flex;
+        justify-content: space-between;
+    } 
+    .header .header-menu-list {
+        display: none;
+    }
+    .footer {
+        display: block;
+    }
+    .section-1 .inner-item {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:767.91px) {
+    .header .header-logo-title a {
+        font-size: 1.6rem;
+    }
+    .header .form-login .success-login span {
+        font-size: 1.6rem;
+    }
+    .header .form-login .success-login a {
+        font-size: 1.6rem;
+    }
+    .header .inner-item-login a {
+        font-size: 1.6rem;
+    }
+    .inner-item-register {
+        font-size: 1.6rem;
+    }
+    .section-1 .inner-title {
+        font-size: 1.8rem;
+    }
+    .section-1 .inner-item {
+        width: 80%;
+    } 
+}
+@media (max-width:575.91px) {
+    .header .form-login .success-login span {
+        display: none;
+    }
+    .section-1 .inner-main .inner-item {
+        width: 100%;
+    } 
+    .section-1 .inner-title {
+        font-size: 1.2rem;
+    }
+    .section-1 .inner-main .inner-item img {
+        width: 40px;
+        height: 40px;
+    }
+    .section-1 .inner-main .inner-item h3 {
+        font-size: 1.3rem;
+    }
+    .section-1 .inner-main .inner-item button {
+        font-size: 1.3rem;
+    }
+    .footer-list-link a {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+  
+
+

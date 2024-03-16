@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Tạp Hóa</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="mt-5">
+        
+
+        <div class="container">
+            <h1 class="mb-5">Cập nhật thông tin</h1>
+            <form method="post" action="/update/{{item_Parking.id}}/">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id" class="form-label">id:</label>
+                    <input type="number" class="form-control" name="id" value="{{item_Parking.id}}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Họ và tên:</label>
+                    <input type="text" step="0.01" class="form-control" name="name" value="{{item_Parking.name}}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="biensoxe" class="form-label">Biển số xe:</label>
+                    <input type="text" step="0.01" class="form-control" name="biensoxe" value="{{item_Parking.biensoxe}}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mobile" class="form-label">Số điện thoại:</label>
+                    <input type="text" class="form-control" name="mobile" value="{{item_Parking.mobile}}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tinhtrang" class="form-label">Tình trạng:</label>
+                    <input type="text" class="form-control" name="tinhtrang" value="{{item_Parking.tinhtrang}}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="thanhtoan" class="form-label">Thanh toán:</label>
+                    <input type="text" class="form-control" name="thanhtoan" value="{{item_Parking.thanhtoan}}" required>
+                </div>
+                <a href="/" class="btn btn-danger mr-1">Quay Lại</a>
+                <button type="submit" class="btn btn-info">Cập nhật</button>
+            </form>
+        </div>
