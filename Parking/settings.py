@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'Parking.wsgi.application'
 DATABASES = {
     'default': {
        "ENGINE": "mssql",
-        "NAME": "huyquan_data",
-        "USER": "huyquan",
-        "PASSWORD": "HuyQuan-2005",
+        "NAME": "huyquan_xxxxxx",
+        "USER": "huyxxxx",
+        "PASSWORD": "************",
         "HOST": "103.124.92.84",
         "PORT": "1433",
         "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
